@@ -4,20 +4,20 @@
 Для заполнения списка элементов необходимо использовать функцию input().
 '''
 
-i = 0
 list1 = []
 list2 = []
-elem = ' '
+element = ' '
+i = 0   # индекс элемента
 
 print('Input some elements of list. Press Enter to exit...')
 
 while True:
-    elem = input(' > ')
-    if elem == '':  # если нажата клавиша Enter - выход из цикла
+    element = input(' > ')
+    if element == '':  # если нажата клавиша Enter - выход из цикла
         break
 
-    list1.append(elem)
-    list2.append(elem)
+    list1.append(element)
+    list2.append(element)
     if i % 2 == 1:  # если индекс нечётный - меняем значения соедних элементов местами
         list2[i-1], list2[i] = list1[i], list1[i-1]
 
