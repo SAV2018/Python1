@@ -5,9 +5,27 @@
 '''
 
 i = 0
-action = ''
-while action == '':
-    list[0] = input('\nEnter list element: ')
+list1 = []
+list2 = []
+elem = ' '
 
+print('Input some elements of list. Press Enter to exit...')
 
-    action = input('\nPress Enter to continue, any key to exit... ')
+while True:
+    elem = input(' > ')
+    if elem == '':  # если нажата клавиша Enter - выход из цикла
+        break
+
+    list1.append(elem)
+    list2.append(elem)
+    if i % 2 == 1:  # если индекс нечётный - меняем значения соедних элементов местами
+        list2[i-1], list2[i] = list1[i], list1[i-1]
+
+    i += 1
+
+    #print(list1)
+    #print(list2)
+
+print('\nResults:')
+print(list1)
+print(list2)
