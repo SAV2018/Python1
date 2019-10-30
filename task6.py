@@ -46,22 +46,25 @@ while True:
     print(' [4] Print units.')
     print(' [5] Exit.')
 
-    action = input('\nYour choice: ')
-    if action == '5':
+    try:
+        action = int(input('\nYour choice: '))
+    except ValueError:
+        continue
+
+    if action == 5:
         break
+    elif 0 < action <5: # обрабатываем и выводим данные
+        names = ('Goods', 'Prices', 'Quantities', 'Units')
+        titles = ('name', 'price', 'num', 'unit')
+        res = {'name': [], 'price': [], 'num': [], 'unit': set()}
 
-    names = ('Goods', 'Prices', 'Quantities', 'Units')
-    titles = ('name', 'price', 'num', 'unit')
-    res = {'name': [], 'price': [], 'num': [], 'unit': set()}
+        for id, v in goods:
+            res['name'].append(v['name'])
+            res['price'].append(v['price'])
+            res['num'].append(v['num'])
+            res['unit'].add(v['unit'])
 
-    for id, v in goods:
-        res['name'].append(v['name'])
-        res['price'].append(v['price'])
-        res['num'].append(v['num'])
-        res['unit'].add(v['unit'])
-
-    print(res)
-
-    print(f'\n{names[int(action)-1]}: {res[titles[int(action)-1]]}')
+        #print(res)
+        print(f'\n{names[action-1]}: {res[titles[action-1]]}')
 
 print('\nGoodbye!')
