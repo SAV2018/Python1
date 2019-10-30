@@ -25,7 +25,7 @@ goods = []
 i = 0
 
 while enter == '': # если нажата клавиша Enter - вводим данные, иначе выходим
-    i += 1
+    i += 1  # индекс записи
 
     name = input('\nEnter name of good: ')
     price = input('Enter price: ')
