@@ -28,5 +28,4 @@ while True:
 
     print(f'\n X in the degree Y = {my_func(x, y)}\n\nPress Enter to exit...')
 
-
 print('\nProgram completed.')
