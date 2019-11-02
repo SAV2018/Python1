@@ -6,3 +6,18 @@
 но каждое слово должно начинаться с заглавной буквы. Необходимо использовать написанную ранее функцию int_func().
 '''
 
+def int_func(str):
+    '''
+    Делает первые буквы каждого слова заглавными
+    :param str: исходная строка
+    :return: строка с первыми заглавными буквами
+    '''
+    return str.title()
+
+while True:
+    str = input('\nEnter a string in lower case (Enter - to exit): ')
+    if str == '':
+        break
+    print(f'Modified string: {int_func(str)}')
+
+print('\nProgram completed.')
