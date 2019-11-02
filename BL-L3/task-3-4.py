@@ -6,3 +6,27 @@
 Второй — более сложная реализация без оператора **, предусматривающая использование цикла.
 '''
 
+def my_func(x, y):
+    '''
+    Возведение числа X в степень Y
+    :param x: основание степени
+    :param y: показатель степени
+    :return: степень числа X
+    '''
+    return x**y
+
+while True:
+    try:
+        x = input('\nEnter number: ')
+        if x == '':
+            break
+        x = float(x)
+        y = int(input('Enter integer number: '))
+    except ValueError:
+        print('Incorrect value')
+        continue
+
+
+    print(f'\n X in the degree Y = {my_func(x, y)}\n\nPress Enter to exit...')
+
+print('\nProgram completed.')
